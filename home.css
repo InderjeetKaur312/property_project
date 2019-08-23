@@ -1,0 +1,122 @@
+    .row li {
+        width: 20%;
+        float: left;
+        list-style-type: none;
+    }
+    
+    #main {
+        background-image: url("images/img19.jpg");
+        background-color: #cccccc;
+        max-width: 100%;
+        height: 700px;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    #sel1 {
+        padding: 2px;
+    }
+    
+    .business #sel2 {
+        width: 50px;
+    }
+    
+    .search-field {
+        height: 50px;
+        padding: 10px;
+        border: none;
+        border-radius: 25px;
+        outline: none;
+    }
+    
+    .business {
+        width: 480px;
+    }
+    
+    .location {
+        width: 200px;
+        margin-left: 100px;
+    }
+    
+    .search-btn {
+        height: 50px;
+        width: 200px
+    }
+    
+    #background_image {
+        text-align: center;
+        position: absolute;
+        display: inline;
+        top: 50%;
+        left: 20%;
+        color: white;
+    }
+    
+    .carousel-inner img {
+        border: 0 none;
+        display: inline-block;
+        min-height: 350px;
+        vertical-align: middle;
+    }
+    /*img {
+        border: 0 none;
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }*/
+    
+    .card img {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #imgs li img {
+        height: 30%;
+        border: 0 none;
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    
+    .fa {
+        padding: 15px;
+        font-size: 20px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .card-deck {
+        width: 350px;
+        height: 400px;
+    }
+    
+    .footer {
+        top: 2344px;
+    }
+    
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+    
+    h2 {
+        font-family: sans-serif;
+    }

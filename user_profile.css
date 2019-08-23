@@ -1,0 +1,26 @@
+.topnav{
+    background-color: black;
+    overflow: hidden;
+  
+}
+.topnav a{
+    float: right;
+    color: aqua;
+    text-align: center;
+    padding:18px 20px;
+    font-size: 18px;
+    text-decoration: none; 
+}
+.search_bar{
+    border: none;
+    padding: 12px 14px;
+    width: 500px;
+    margin-top: 8px; 
+    margin-left: 300px; 
+}
+.search_button{
+    border: none;
+    padding: 12px 14px;
+  
+    margin-left: 800px; 
+}

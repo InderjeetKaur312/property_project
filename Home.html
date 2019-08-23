@@ -48,29 +48,35 @@
             <div class="col-lg-12 col-sm-12" id="main">
                 <div id="background_image">
                     <!-- <input type="text" class="search-field business"> -->
-
-                    <form action="" method="POST">
                     <div class="row">
-
                         <div class="col-lg-5">
-                        
                             <div class="form-group text-center ">
-                                <select name="city" class="form-control search-field business" id="sel1">
+                                <select class="form-control search-field business" id="sel1">
                                         <option selected disabled hidden>Search By Cities</option>
-                              <option value="d">Delhi</option>
-                              <option value="m">Mumbai</option>
-                              <option value="b">Bengluru</option>
-                              <option value="h">Hyderabad</option>
+                              <option>Delhi</option>
+                              <option>Mumbai</option>
+                              <option>Bengluru</option>
+                              <option>Chennai</option>
+                              <option>Hyderabad</option>
 
                                </select>
                             </div>
                         </div>
-                        
+                        <div class="col-lg-3">
+                            <select class="form-control search-field location" id="sel2">
+                                        <option selected disabled hidden>Search By Budget</option>
+                              <option>50,0000-2,50,000</option>
+                              <option>3,00000-10,00000</option>
+                              <option>11,00000-20,00000</option>
+                              <option>21,00000-30,00000</option>
+                              <option>40,00000-50,00000</option>
+
+                               </select>
+                        </div>
                         <div class="col-lg-2">
                             <!-- <input type="text" class="search-field location" placeholder="Search By Budget"> -->
-                            <button class=" search-btn w3-btn w3-round-xxlarge bg-dark" name="search">Search</button>
+                            <button class=" search-btn w3-btn w3-round-xxlarge bg-dark">Search</button>
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -82,33 +88,12 @@
             <h2 class="text-center text-danger"><b>Project Gallery</b></h2>
         </div>
     </div>
-         <?php    
-           
-            include('connection.php');
-            error_reporting(0);
-
-            $city_data=$_POST['city'];
-             
-             if(isset($_POST['search'])){
-                $sql="select * from property_images,properties where loc_id='$city_data' and location_id=loc_id and image like 'h_%';";
-                }
-            else{
-                    $sql="select * from property_images,properties where loc_id='d' and location_id=loc_id and image like 'h_%';";
-                }
-            
-            $res=mysqli_query($conn,$sql);
-            if($res->num_rows)
-            {
-                while($row=mysqli_fetch_assoc($res))
-                {
-                $img_data=$row['id'];
-               
-                echo 
-                    '<div class="col-md-5 d-inline-block ml-5 mt-3">
-                    <div class="card" style="width:100%;height:100%">
-                    <img class="card-img-top" src="images/'.$row['image'].'" alt="Card image" style="width:100%;height:390px">
-                
-                    <div class="card-body">
+    <div class="row mt-3">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5 ">
+            <div class="card" style="width:100%;height:550px">
+                <img class="card-img-top" src="images/img23.jpg" alt="Card image" style="width:100%;height:390px">
+                <div class="card-body">
                     <div class="row">
                         <div class="col-lg-5 ">
                             <h4 class="card-title"><b>TDI City Kundli</b></h4>
@@ -120,16 +105,87 @@
                         <div class="col-lg-3 float-right">
 
                             <p class="card-text">Rs.<b>28 Lac </b><span class="text-danger">onwards</span></p>
-                            <a href="../property_layout/layout.php ? id='.$img_data.'" class="btn btn-primary mt-4">See Profile</a>
+                            <a href="#" class="btn btn-primary mt-4">See Profile</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>';              
-    }
-}
-    ?>
-        
+        </div>
+
+        <div class="col-lg-5 ">
+            <div class="card" style="width:100%;height:550px">
+                <img class="card-img-top" src="images/img17.jpg" alt="Card image" style="width:100%;height:390px">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-5 ">
+                            <h4 class="card-title"><b>TDI City Kundli</b></h4>
+                            <p class="card-text">TDI Group</p>
+                            <p class="card-text">2,3,4 BHK Flats</p>
+                        </div>
+                        <div class="col-lg-4"></div>
+
+                        <div class="col-lg-3 float-right">
+
+                            <p class="card-text">Rs.<b>30 Lac </b><span class="text-danger">onwards</span></p>
+                            <a href="#" class="btn btn-primary mt-4">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    </div>
+    <div class="row ml-5 mt-2">
+        <div class="col-lg-1 col-sm-12"></div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="card-deck mt-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/img20.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Himalaya Pride</b></h4>
+                        <p class="card-text">Himalaya Group</p>
+                        <p class="card-text">2,3,4 BHK Flats</p>
+                        <p class="card-text">Rs.<b>40 Lac </b><small class="text-danger">onwards</small></p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="card-deck mt-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/img21.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Galaxy Enclave</b></h4>
+                        <p class="card-text">Galaxy Group</p>
+                        <p class="card-text">Residential Plots & 3 BHK Villas</p>
+                        <p class="card-text">Rs.<b>17.9 Lac </b><small class="text-danger">onwards</small></p>
+
+                        <a href="#" class="btn btn-primary">See Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <div class="card-deck mt-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/img22.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>T Homes</b></h4>
+                        <p class="card-text">T & T Group</p>
+                        <p class="card-text">3,4 BHK Flats</p>
+                        <p class="card-text">Rs.<b>56.7 Lac </b><small class="text-danger">onwards</small></p>
+
+
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-12"></div>
+
+    </div>
     <!-- Section Start -->
     <div class="row mt-4">
         <div class="jumbotron jumbotron-fluid text-center">
