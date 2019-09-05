@@ -22,7 +22,7 @@
 $prob_id=$_GET['id'];
 
     $sql="select interior_image from property_images ,interiors where house_id=$prob_id and property_images.id=house_id";
-    $result=mysqli_query($conn,$sql);
+$result=mysqli_query($conn,$sql);
     
     $sql1="select image from property_images ,interiors where house_id=$prob_id and property_images.id=house_id";
     $result1=mysqli_query($conn,$sql1);
@@ -38,9 +38,9 @@ $prob_id=$_GET['id'];
         while($rows=mysqli_fetch_assoc($result))
         {
             echo '
-                <div class="row ml-1 mr-1">
+                <div class="row">
                     <div class="col-lg-4">
-                    <img src="images/'.$rows['interior_image'].'" alt="Card image" style="width:100%;height:390px">
+                    <img src="images/'.$rows['interior_image'].'" alt="Card image" style="width:100%;height:390px;">
                     </div>
                 </div>'; 
         } 
